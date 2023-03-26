@@ -47,8 +47,8 @@ if (!isset($_POST["agree"])) {
 }
 
 $serverName = 'localhost';
-$user = "u47538";
-$pass = "7904823";
+$user = "u52806";
+$pass = "7974759";
 $dbName = $user;
 
 $db = new PDO("mysql:host=$serverName;dbname=$dbName", $user, $pass, array(PDO::ATTR_PERSISTENT => true));
