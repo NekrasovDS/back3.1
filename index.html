@@ -12,74 +12,90 @@
     <label>
       Ф.И.О.:
       <br>
-      <input name="field-name-1" value="Введите Ф.И.О.">
+      <input name="fieldname1" value="Введите Ф.И.О.">
     </label>
     <br>
 
-    <label>
-      Адрес электронной почты/email:
-      <br>
-      <input name="field-email" type="email" placeholder="Введите email">
-    </label>
-    <br>
+  <!DOCTYPE html>
+<html lang="ru">
 
-    <label>
-      Дата дня рожденния:
-      <br>
-      <input name="field-date" value="2022-09-08" type="date">
-    </label>
-    <br> Пол:
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Веб 3</title>
+</head>
 
-    <br>
-    <label>
-      <input type="radio" checked="checked" name="radio-group-1" value="Значение1"> Мужской
-    </label>
-    <label>
-      <input type="radio" name="radio-group-1" value="Значение2"> Женский
-    </label>
-    <br> Количество конечностей:
-    <br>
-    <label>
-      <input type="radio" checked="checked" name="radio-group-2" value="Значение1"> 1
-    </label>
-    <label>
-      <input type="radio" name="radio-group-2" value="Значение2"> 2
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="radio-group-2" value="Значение2"> 3
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="radio-group-2" value="Значение2"> 4
-    </label>
-    <br>
-    <label>
-      <input type="radio" name="radio-group-2" value="Значение2"> Нет в наличии
-    </label>
-    <br>
-
-    <label>
-      Сверхспособности:
-      <br>
-      <select name="field-name-4[]" multiple="multiple">
-        <option value="Значение1">Бессмертие</option>
-        <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
-        <option value="Значение3" selected="selected">Левитация</option>
-      </select>
-    </label>
-    <br>
-
-    <label>
-      Немного о себе (ваша биография):
-      <br>
-      <textarea name="field-name-2">Я...</textarea>
-    </label>
-    <br>
-    <label>
-      <input type="checkbox" checked="checked" name="check-1"> С контрактом ознакомлен(-а)</label>
-    <br> Отправка формы:
-    <input type="submit" value="Отправить">
-      </form>
+<body style="font-size: 20px;">
+	<form action="form.php" method="post">
+		<p>
+			<label>Имя пользователя<br><br>
+				<input placeholder="Имя" type="text" name="name" value="">
+			</label>
+		<p>
+			<label>e-mail пользователя<br><br>
+				<input placeholder="E-mail" type="text" name="email" value="">
+			</label>
+		</p>
+		<p>
+			<label>Год рождения<br><br>
+				<select name="year">
+					<option value="">Select...</option>
+					<?php
+					for ($i = 2008; $i >= 1900; --$i) {
+						echo "<option value='$i'>$i</option>";
+					}
+					?>
+				</select>
+			</label>
+		</p>
+		<p>Пол<br><br>
+			<label>
+				<input type="radio" name="gender" value="man">Мужской
+			</label>
+			<label>
+				<input type="radio" name="gender" value="woman">Женский
+			</label>
+		</p>
+		<p>Кол-во конечностей<br><br>
+			<label>
+				<input type="radio" name="numlimbs" value="1">1
+			</label>
+			<label>
+				<input type="radio" name="numlimbs" value="2">2
+			</label>
+			<label>
+				<input type="radio" name="numlimbs" value="3">3
+			</label>
+			<label>
+				<input type="radio" name="numlimbs" value="4">4
+			</label>
+		</p>
+		<p>
+			<label>Сверхспособности<br><br>
+				<select multiple name="super-powers[]">
+					<option value="immortality">Бессмертие</option>
+					<option value="walkthrough-walls">Прохождение сквозь стены</option>
+					<option value="levitation">Левитация</option>
+				</select>
+			</label>
+		</p>
+		<div>
+			<p>
+				<label>Биография<br><br>
+					<textarea placeholder="Расскажите о себе" name="biography"></textarea>
+				</label>
+			</p>
+		</div>
+		<p>
+			<label>
+				<input type="checkbox" name="agree">С контранктом ознакомлен
+				(а)
+			</label>
+		</p>
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+	</form>
 </body>
+
 </html>
