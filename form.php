@@ -3,28 +3,28 @@
 header('Content-Type: text/html; charset=UTF-8');
 if (!empty($_POST)) {
 	if (empty($_POST["name"])) {
-		$errors[] = "Введите имя!";
+		$errors[] = "Укажите Ваше имя! Это поле не должно быть пустым";
 	}
 	if (empty($_POST["email"])) {
-		$errors[] = "Введите e-mail!";
+		$errors[] = "Введите Ваш e-mail! Это поле не должно быть пустым";
 	}
 	if (empty($_POST["year"])) {
-		$errors[] = "Выберите год рождения!";
+		$errors[] = "Выберите Ваш год рождения! Это поле не должно быть пустым";
 	}
 	if (!isset($_POST["gender"])) {
-		$errors[] = "Выберите пол!";
+		$errors[] = "Выберите пол! Это поле не должно быть пустым";
 	}
-	if (!isset($_POST["numlimbs"])) {
-		$errors[] = "Выберите кол-во конечностей!";
+	if (!isset($_POST["limbs"])) {
+		$errors[] = "Выберите кол-во конечностей! Это поле не должно быть пустым";
 	}
 	if (!isset($_POST["super-powers"])) {
-		$errors[] = "Выберите хотя бы одну суперспособность!";
+		$errors[] = "Выберите суперспособность! Это поле не должно быть пустым";
 	}
 	if (empty($_POST["biography"])) {
-		$errors[] = "Расскажите что-нибудь о себе!";
+		$errors[] = "Расскажите что-нибудь о себе! Это поле не должно быть пустым";
 	}
 } else {
-	$errors[] = "Неверные данные формы!";
+	$errors[] = "Неверные данные для формы!";
 }
 
 if (isset($errors)) {
@@ -37,7 +37,7 @@ $name = htmlspecialchars($_POST["name"]);
 $email = htmlspecialchars($_POST["email"]);
 $year = intval(htmlspecialchars($_POST["year"]));
 $gender = htmlspecialchars($_POST["gender"]);
-$limbs = intval(htmlspecialchars($_POST["numlimbs"]));
+$limbs = intval(htmlspecialchars($_POST["limbs"]));
 $superPowers = $_POST["super-powers"];
 $biography = htmlspecialchars($_POST["biography"]);
 if (!isset($_POST["agree"])) {
@@ -47,8 +47,8 @@ if (!isset($_POST["agree"])) {
 }
 
 $serverName = 'localhost';
-$user = "u52806";
-$pass = "7974759";
+$user = "u47538";
+$pass = "7904823";
 $dbName = $user;
 
 $db = new PDO("mysql:host=$serverName;dbname=$dbName", $user, $pass, array(PDO::ATTR_PERSISTENT => true));
@@ -76,4 +76,4 @@ try {
 	exit();
 }
 $db = null;
-echo "Данные отправлены!";
+echo "Данные отправлены! Спасибо)";
