@@ -1,23 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	  <meta charset="utf-8">
-	  <title>Гиперссылки и формы</title>
-</head>
-
-<body>
-<h2>Форма</h2>  
-  <form action="/" method="POST">
-
-    <label>
-      Ф.И.О.:
-      <br>
-      <input name="fieldname1" value="Введите Ф.И.О.">
-    </label>
-    <br>
-
-  <!DOCTYPE html>
-<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
