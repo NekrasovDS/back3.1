@@ -4,22 +4,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Веб 3</title>
+	<title>Back 3</title>
 </head>
 
 <body style="font-size: 20px;">
 	<form action="form.php" method="post">
 		<p>
-			<label>Имя пользователя<br><br>
+			<label>Пожалуйста, введите Ваше имя:<br><br>
 				<input placeholder="Имя" type="text" name="name" value="">
 			</label>
 		<p>
-			<label>e-mail пользователя<br><br>
+			<label>Теперь Вашу электронную почту:<br><br>
 				<input placeholder="E-mail" type="text" name="email" value="">
 			</label>
 		</p>
 		<p>
-			<label>Год рождения<br><br>
+			<label>Укажите свой год рождения:<br><br>
 				<select name="year">
 					<option value="">Select...</option>
 					<?php
@@ -30,7 +30,7 @@
 				</select>
 			</label>
 		</p>
-		<p>Пол<br><br>
+		<p>Отметьте свой пол:<br><br>
 			<label>
 				<input type="radio" name="gender" value="man">Мужской
 			</label>
@@ -38,7 +38,7 @@
 				<input type="radio" name="gender" value="woman">Женский
 			</label>
 		</p>
-		<p>Кол-во конечностей<br><br>
+		<p>Укажите количество конечностей:<br><br>
 			<label>
 				<input type="radio" name="numlimbs" value="1">1
 			</label>
@@ -53,7 +53,7 @@
 			</label>
 		</p>
 		<p>
-			<label>Сверхспособности<br><br>
+			<label>Какую сверхспособность Вы хотите?<br><br>
 				<select multiple name="super-powers[]">
 					<option value="immortality">Бессмертие</option>
 					<option value="walkthrough-walls">Прохождение сквозь стены</option>
@@ -63,19 +63,19 @@
 		</p>
 		<div>
 			<p>
-				<label>Биография<br><br>
+				<label>Расскажите немного о себе:<br><br>
 					<textarea placeholder="Расскажите о себе" name="biography"></textarea>
 				</label>
 			</p>
 		</div>
 		<p>
 			<label>
-				<input type="checkbox" name="agree">С контранктом ознакомлен
+				<input type="checkbox" name="agree">С контранктом и пользовательским соглашением ознакомлен
 				(а)
 			</label>
 		</p>
 		<p>
-			<input type="submit" value="Отправить">
+			<input type="submit" value="Отправить и забыть">
 		</p>
 	</form>
 </body>
