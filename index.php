@@ -68,7 +68,7 @@ try {
   
   
   $id = $db->lastInsertId();
-  $sppe= $db->prepare("INSERT INTO super SET name=:name, per_id=:person");
+  $sppe= $db->prepare("INSERT INTO super1 SET name=:name, per_id=:person");
   $sppe->bindParam(':person', $id);
   foreach($superpowers as $inserting){
 	$sppe->bindParam(':name', $inserting);
